@@ -1,3 +1,5 @@
+/* Target by Element */
+
 body {
     width: 70%;
     border: 2px solid #000;
@@ -16,9 +18,26 @@ hr {
     width: 100%;
 }
 
-.centre-text {
+table {
+    border-collapse: collapse;
+    margin: 5px auto;
+}
+
+td {
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+}
+
+form {
     text-align: center;
 }
+
+footer {
+    border: 2px solid #000;
+    margin-top: 1rem;
+}
+
+/* Target by Class */
 
 .side-nav {
     height: 100%;
@@ -31,15 +50,11 @@ hr {
     background-color: #000;
 }
 
-table {
-    border-collapse: collapse;
-    margin: 5px auto;
+.centre-text {
+    text-align: center;
 }
 
-td {
-  border: 1px solid rgb(190,190,190);
-  padding: 10px 20px;
-}
+/* Target by ID */
 
 #table {
     padding-left: 1vw;
@@ -47,8 +62,4 @@ td {
 
 #robit {
     height: 2em;
-}
-
-form {
-    text-align: center;
 }
