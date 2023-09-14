@@ -67,7 +67,7 @@
                 </form>
             </div>
             
-            <div class="side-nav">
+            <div class="side-nav bg-dark">
                 <ul>
                     <li><a href="#">Top</a></li>
                     <li><a href="#">Mid</a></li>
@@ -84,8 +84,10 @@
         <script>
             function test(){
                 var number = document.getElementById("number").value;
-                document.getElementById("table_fill").innerHTML=number;
-                console.log("Updated table 0, 0 to: " + number);
+                if (number != "") {
+                    document.getElementById("table_fill").innerHTML=number;
+                    console.log("Updated table 0, 0 to: " + number);
+                }
             }
         </script>
         
