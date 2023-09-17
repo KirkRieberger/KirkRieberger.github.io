@@ -1,9 +1,9 @@
 /* Target by Element */
 
 body {
-    width: 70%;
-    margin: 70px auto;
+    margin-top: 70px;
     padding: 1rem;
+    border: 2px dashed #000
 }
 
 nav {
@@ -19,11 +19,11 @@ hr {
 
 table {
     border-collapse: collapse;
-    margin: 5px auto;
+    margin: 1rem auto;
 }
 
 td {
-    border: 1px solid #BEBEBE;
+    border: 0.25rem solid #BEBEBE;
     padding: 10px 20px;
 }
 
@@ -33,19 +33,19 @@ form {
 
 footer {
     border: 2px solid #000;
-    margin-top: 1rem;
-    width: 70%;
+    margin: 1rem auto;
     position: fixed;
     bottom: 0;
-}
-
-footer p {
     text-align: center;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 main {
+    margin: 1rem, auto;
     border: 2px solid #000;
     padding-bottom: 1rem;
+    width: 70%;
 }
 
 /* Target by Class */
