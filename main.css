@@ -3,7 +3,6 @@
 body {
     margin-top: 70px;
     padding: 1rem;
-    border: 2px dashed #000
 }
 
 nav {
@@ -32,17 +31,14 @@ form {
 }
 
 footer {
-    border: 2px solid #000;
-    margin: 1rem auto;
-    position: fixed;
-    bottom: 0;
+    background: #999;
+    margin: 0 auto;
     text-align: center;
-    box-sizing: border-box;
-    width: 100%;
+    width: 70%;
 }
 
 main {
-    margin: 1rem, auto;
+    margin: 0 auto;
     border: 2px solid #000;
     padding-bottom: 1rem;
     width: 70%;

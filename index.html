@@ -44,9 +44,7 @@
 
                 <hr />
 
-                <p style="color: red; font-weight: bold;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor
-                    incididunt ut labore
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 1incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
@@ -82,11 +80,11 @@
         </main>
 
         <aside class="side-nav bg-dark">
-            <ul>
-                <li><a href="#">Top</a></li>
-                <li><a href="#">Mid</a></li>
-                <li><a href="#">Bot</a></li>
-            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.</p>>
         </aside>
 
         <footer>
@@ -94,6 +92,15 @@
         </footer>
 
         <script>
+            // Submit form when enter is pressed
+            var input = document.getElementById("number");
+            input.addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    test();
+                }
+            })
+
             function test() {
                 var number = document.getElementById("number").value;
                 if (number != "") {
