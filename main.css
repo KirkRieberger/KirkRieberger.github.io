@@ -44,6 +44,11 @@ main {
     width: 70%;
 }
 
+aside>p {
+    margin: 0.5rem;
+    color: #BEBEBE;
+}
+
 /* Target by Class */
 
 .side-nav {
