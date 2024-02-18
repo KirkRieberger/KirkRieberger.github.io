@@ -1,0 +1,39 @@
+#page-top {
+    margin-top: 70px;
+}
+
+#dam {
+    width: 66.6%;
+    border: 8px ridge grey;
+    border-radius: 10px;
+}
+
+.sort-arrow {
+    float: right;
+    font-weight: normal;
+}
+
+.toast {
+    position: fixed;
+    top: 6.375em;
+    right: 2em;
+}
+
+@media screen and (max-width: 576px) {
+    #page-top {
+        margin-top: 58px;
+    }
+}
+
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #ccc;
+}
+
+/* @media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #ccc;
+    }
+
+} */
