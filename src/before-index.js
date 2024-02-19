@@ -1,3 +1,3 @@
-if (window.matchMedia("prefers-color-scheme: dark")) {
-    $("body").addClass("dark-mode");
-}
+// if (window.matchMedia("prefers-color-scheme: dark")) {
+//     $("body").addClass("dark-mode");
+// }

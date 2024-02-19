@@ -5,9 +5,9 @@ $(document).ready(function () {
     $('.toast').toast('hide');
 })
 
-if (window.matchMedia("prefers-color-scheme: dark")) {
-    $("body").addClass("dark-mode");
-}
+// if (window.matchMedia("prefers-color-scheme: dark")) {
+//     $("body").addClass("dark-mode");
+// }
 
 function submitForm() {
     const successModal = $("#form-modal-success");
