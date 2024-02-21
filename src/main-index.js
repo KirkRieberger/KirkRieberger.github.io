@@ -32,6 +32,7 @@ function submitForm() {
 
     if (fName != "" && lName != "" && email != "" && subject != "" && message != "") {
         successModal.modal('show');
+        $("#form")[0].reset();
     } else {
         $("#form-failure-toast").toast("show");
     }
