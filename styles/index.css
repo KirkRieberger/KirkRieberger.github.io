@@ -23,6 +23,19 @@
     right: 2em;
 }
 
+.hidden {
+    display: none;
+}
+
+.reveal {
+    text-decoration: underline;
+    color: dodgerblue;
+}
+
+.reveal:hover {
+    color: cornflowerblue;
+}
+
 @media screen and (max-width: 576px) {
     #page-top {
         margin-top: 58px;

@@ -22,9 +22,6 @@ function darkModeTest(event) {
 // System theme change listener
 prefersDark.addEventListener("change", darkModeTest);
 
-
-
-
 function submitForm() {
     const successModal = $("#form-modal-success");
     let fName = $("#fName").val();
@@ -38,6 +35,11 @@ function submitForm() {
     } else {
         $("#form-failure-toast").toast("show");
     }
+}
+
+function revealEmail() {
+    $("#email-cover").addClass("hidden");
+    $("#email").removeClass("hidden");
 }
 
 /*
