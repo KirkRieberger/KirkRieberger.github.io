@@ -21,7 +21,6 @@ screen.orientation.addEventListener("change", (event) => {
         $(".modal-dialog").removeClass("modal-dialog-centered");
         console.log("Set to landscape mode");
     }
-    console.log(`ScreenOrientation change: ${type}, ${angle} degrees.`);
 });
 
 
@@ -65,28 +64,3 @@ function mailClick() {
     const mailModal = $("#mailModal");
     mailModal.modal('show');
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-    const output = document.getElementById("o9n");
-    const displayOrientation = () => {
-        const screenOrientation = screen.orientation.type;
-        output.innerHTML = `The orientation of the screen is: ${screenOrientation}`;
-        if (screenOrientation === "landscape-primary") {
-            console.log("That looks good.");
-        } else if (screenOrientation === "landscape-secondary") {
-            console.log("Mmmh... the screen is upside down!");
-        } else if (screenOrientation === "portrait-secondary" || screenOrientation === "portrait-primary") {
-            console.log("Mmmh... you should rotate your device to landscape");
-        } else if (screenOrientation === undefined) {
-            console.log("The orientation API isn't supported in this browser :(");
-        }
-    };
-
-    if (screen && screen.orientation !== null) {
-        try {
-            window.screen.orientation.onchange = displayOrientation;
-            displayOrientation();
-        }
-        catch (e) { output.innerHTML = e.message; }
-    }
-});
