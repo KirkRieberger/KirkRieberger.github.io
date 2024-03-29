@@ -17,12 +17,6 @@
     cursor: pointer;
 }
 
-.toast {
-    position: fixed;
-    top: 6.375em;
-    right: 2em;
-}
-
 .hidden {
     display: none;
 }
