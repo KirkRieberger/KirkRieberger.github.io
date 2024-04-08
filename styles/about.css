@@ -3,5 +3,11 @@
 }
 
 #portrait-image {
-    width: 10%;
+    width: 33%;
+}
+
+@media screen and (width > 992px) {
+    #portrait-image {
+        width: 10%;
+    }
 }
