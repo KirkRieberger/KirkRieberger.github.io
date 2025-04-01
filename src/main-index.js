@@ -1,25 +1,27 @@
 // Page-specific JavaScript
 // Once document fully loaded
 $(document).ready(function () {
-    // Initialize toasts
-    $('.toast').toast({ delay: 2000 })
-    $('.toast').toast('hide');
+    const contactForm = document.getElementById("form");
+    contactForm.addEventListener('submit', event => {
+        if (!contactForm.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        contactForm.classList.add('was-validated');
+    }, false);
 })
 
 function submitForm() {
-    const successModal = $("#form-modal-success");
+    // Successful Validation
+    const successModal = new bootstrap.Modal($("#form-modal-success"));
     let fName = $("#fName").val();
     let lName = $("#lName").val();
     let email = $("#username").val() + $("#domain").val();
     let subject = $("#subject").val();
     let message = $("#message").val();
 
-    if (fName != "" && lName != "" && email != "" && subject != "" && message != "") {
-        successModal.modal('show');
-        $("#form")[0].reset();
-    } else {
-        $("#form-failure-toast").toast("show");
-    }
+    successModal.show();
 }
 
 function revealEmail() {

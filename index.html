@@ -24,7 +24,6 @@
         <title>Home | Kirk Rieberger</title>
         <!-- Robit image from the Mekanism mod for Minecraft by Aidan Brady. Issued under MIT License -->
         <link rel="icon" href="./resources/Robit.png" type="image/png" />
-        <script src="./src/before-index.js"></script>
     </head>
 
     <body>
@@ -83,10 +82,10 @@
                 </div>
             </article>
             <section class="row p-1">
+                <!-- Floyd Table column -->
                 <div class="col-lg-4 p-1 border">
                     <h5 class="text-center">Members of Pink Floyd</h5>
-                    <table id="FloydTable" class="table table-striped caption-top">
-                        <!-- <caption>Members of Pink Floyd</caption> -->
+                    <table id="FloydTable" class="table table-striped">
                         <thead>
                             <tr>
                                 <th scope="col" class="clickable" onclick="headingClick(0)">
@@ -124,12 +123,14 @@
                         </tbody>
                     </table>
                 </div>
+                <!-- Image column -->
                 <div class="col-lg-4 p-1 border text-center align-content-center">
                     <a href="https://en.wikipedia.org/wiki/Dickson_Dam">
                         <img id="dam" class="img-fluid" src="./resources/DicksonDam.jpg"
                             alt="A photo of the Dickson Dam in Red Deer County, Alberta">
                     </a>
                 </div>
+                <!-- Form column -->
                 <div class="col-lg-4 p-1 border">
                     <div class="container">
                         <div class="row">
@@ -137,15 +138,15 @@
                                 <h5>Contact Me!</h5>
                             </div>
                         </div>
-                        <form id="form" action="">
+                        <form id="form" class="needs-validation" action="javascript:submitForm()" novalidate>
                             <div class="row justify-content-center mb-3">
                                 <div class="col-lg-6">
                                     <label for="fName" class="form-label">First Name</label>
-                                    <input id="fName" class="form-control" name="fName">
+                                    <input id="fName" class="form-control" name="fName" required>
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="lName" class="form-label">Last Name</label>
-                                    <input id="lName" class="form-control" name="lName">
+                                    <input id="lName" class="form-control" name="lName" required>
                                 </div>
                             </div>
                             <div class="row justify-content-center mb-3">
@@ -153,17 +154,17 @@
                                     <label class="form-label" for="fName">Your Email</label>
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="username" placeholder="Username"
-                                            name="username" />
+                                            name="username" required />
                                         <span class="input-group-text">@</span>
                                         <input type="text" class="form-control" id="domain" placeholder="Domain"
-                                            name="domain" />
+                                            name="domain" required />
                                     </div>
                                 </div>
                             </div>
                             <div class="row justify-content-center mb-3">
                                 <div class="col-lg-6">
                                     <label class="form-label" for="subject">Subject</label>
-                                    <select class="form-select" id="subject" name="subject">
+                                    <select class="form-select" id="subject" name="subject" required>
                                         <option value="val1" selected>Class Inquiry</option>
                                         <option value="val2">Feature Request</option>
                                         <option value="val3">Test in Prod</option>
@@ -175,13 +176,12 @@
                                 <div class="col-lg-12">
                                     <label class="form-label" for="message">Message</label>
                                     <textarea id="message" class="form-control" placeholder="Your message here"
-                                        name="message"></textarea>
+                                        name="message" required></textarea>
                                 </div>
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col-lg-2 text-center">
-                                    <button type="button" id="submit" class="btn btn-primary"
-                                        onclick="submitForm()">Submit</button>
+                                    <button type="submit" id="submit" class="btn btn-primary">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -215,16 +215,9 @@
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                            data-bs-target="form-modal-success">Close</button>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="toast-container position-fixed top-0 end-0 p-3 mt-5">
-            <div class="toast bg-danger text-white" role="alert" aria-live="assertive" aria-atomic="true"
-                id="form-failure-toast">
-                <div class="toast-body">
-                    Form error!
                 </div>
             </div>
         </div>
