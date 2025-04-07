@@ -10,7 +10,7 @@ $(document).ready(function () {
 
         contactForm.classList.add('was-validated');
     }, false);
-})
+});
 
 function submitForm() {
     // Successful Validation
