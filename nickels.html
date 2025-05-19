@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+    <head>
+        <meta name="author" content="Kirk Rieberger" />
+        <meta name="color-scheme" content="dark light" />
+        <!-- Required meta tags for Bootstrap (Also just nice-to-haves) -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!--Bootstrap Core Stylesheet -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <!-- Load jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+        <!-- My Stuff -->
+        <title>Nickels | Kirk Rieberger</title>
+        <!-- Robit image from the Mekanism mod for Minecraft by Aidan Brady. Issued under MIT License -->
+        <link rel="icon" href="./resources/Robit.png" type="image/png" />
+        <link rel="stylesheet" href="./styles/general.css">
+    </head>
+
+    <body>
+        <header id="top-nav" class="navbar navbar-expand-sm fixed-top border-bottom">
+            <!-- Apply dark mode before body loads to avoid flicker. Works on html root element. -->
+            <script src="./src/dark-mode.js"></script>
+            <div class="container-fluid">
+                <!-- Navbar Brand - Icon on left side of Navbar -->
+                <a class="navbar-brand" href="./index.html"><img id="brand-image" src="./resources/Robit.png" alt="Home"
+                        width="30" />
+                    Kirk Rieberger</a>
+                <!-- Button for when Navbar gets collapsed -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavCollapse" aria-controls="navbarNavCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Rest of the nav links. The part that actually gets collapsed when shrinking the screen -->
+                <nav id="navbarNavCollapse" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./examples.html">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/KirkRieberger">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                                Page 5
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./coins.html"
+                                data-bs-toggle="dropdown" aria-expanded="false">Coins</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./pennies.html">Pennies</a></li>
+                                <li><a class="dropdown-item bg-body-tertiary" href="#">Nickels</a></li>
+                                <li><a class="dropdown-item" href="./dimes.html">Dimes</a></li>
+                                <li><a class="dropdown-item" href="./quarters.html">Quarters</a></li>
+                                <li><a class="dropdown-item" href="./loonies.html">Loonies</a></li>
+                                <li><a class="dropdown-item" href="./toonies.html">Toonies</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav> <!-- /navbar-collapse -->
+            </div>
+        </header>
+        <div id="page-top"></div>
+        <div class="container border border-3">
+
+            <aside class="offcanvas offcanvas-start">
+                <div class="offcanvas-body">
+                    Text
+                </div>
+            </aside>
+
+            <main class="">
+                <header>
+                    <h1>Nickels</h1>
+                </header>
+                <section class="row">
+                    <p>On this page ........</p>
+                </section>
+                <!-- Standard editions -->
+                <hr />
+                <h2>Commemorative Coins</h2>
+                <section id="year-2005-victory_nickel" class="row striped">
+                    <p class="coin-heading">
+                        2005 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/nickels/canada/commemorative/thumbsnickel-2005-rev-victory_nickel-thumb.png"
+                            alt="2005 nickel - Victory Nickel" class="w-75" loading="lazy"
+                            onclick="viewImage('nickel-2005-rev-victory_nickel.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/nickels/canada/commemorative/thumbsnickel-2005-obv-victory_nickel-thumb.png"
+                            alt="2005 nickel - Victory Nickel" class="w-75" loading="lazy"
+                            onclick="viewImage('nickel-2005-obv-victory_nickel.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer></footer>
+
+        <div id="viewerModal" class="modal" tabindex="-1">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="image-viewer-title" class="modal-title"></h5>
+                    </div>
+                    <div id="image-container" class="modal-body text-center">
+                        <img id="modal-img" class="modal-img h-100" src="" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="./src/image-viewer.js"></script>
+        <script src="./src/striped-rows.js"></script>
+    </body>
+
+</html>

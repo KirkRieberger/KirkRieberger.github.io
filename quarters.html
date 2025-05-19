@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+    <head>
+        <meta name="author" content="Kirk Rieberger" />
+        <meta name="color-scheme" content="dark light" />
+        <!-- Required meta tags for Bootstrap (Also just nice-to-haves) -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!--Bootstrap Core Stylesheet -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <!-- Load jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+        <!-- My Stuff -->
+        <title>Quarters | Kirk Rieberger</title>
+        <!-- Robit image from the Mekanism mod for Minecraft by Aidan Brady. Issued under MIT License -->
+        <link rel="icon" href="./resources/Robit.png" type="image/png" />
+        <link rel="stylesheet" href="./styles/general.css">
+    </head>
+
+    <body>
+        <header id="top-nav" class="navbar navbar-expand-sm fixed-top border-bottom">
+            <!-- Apply dark mode before body loads to avoid flicker. Works on html root element. -->
+            <script src="./src/dark-mode.js"></script>
+            <div class="container-fluid">
+                <!-- Navbar Brand - Icon on left side of Navbar -->
+                <a class="navbar-brand" href="./index.html"><img id="brand-image" src="./resources/Robit.png" alt="Home"
+                        width="30" />
+                    Kirk Rieberger</a>
+                <!-- Button for when Navbar gets collapsed -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavCollapse" aria-controls="navbarNavCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Rest of the nav links. The part that actually gets collapsed when shrinking the screen -->
+                <nav id="navbarNavCollapse" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./examples.html">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/KirkRieberger">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                                Page 5
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./coins.html"
+                                data-bs-toggle="dropdown" aria-expanded="false">Coins</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./pennies.html">Pennies</a></li>
+                                <li><a class="dropdown-item" href="./nickels.html">Nickels</a></li>
+                                <li><a class="dropdown-item" href="./dimes.html">Dimes</a></li>
+                                <li><a class="dropdown-item bg-body-tertiary" href="#">Quarters</a></li>
+                                <li><a class="dropdown-item" href="./loonies.html">Loonies</a></li>
+                                <li><a class="dropdown-item" href="./toonies.html">Toonies</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav> <!-- /navbar-collapse -->
+            </div>
+        </header>
+        <div id="page-top"></div>
+        <div class="container border border-3">
+
+            <aside class="offcanvas offcanvas-start">
+                <div class="offcanvas-body">
+                    Text
+                </div>
+            </aside>
+
+            <main class="">
+                <header>
+                    <h1>Quarters</h1>
+                </header>
+                <section class="row">
+                    <p>On this page ........</p>
+                </section>
+                <!-- Standard editions -->
+                <hr />
+                <h2>Commemorative Coins</h2>
+
+                <section id="year-1973-rcmp_100th_anniversary" class="row striped">
+                    <p class="coin-heading">
+                        1973 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1973-rev-rcmp_100th_anniversary-thumb.png"
+                            alt="1973 quarter - Rcmp 100Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1973-rev-rcmp_100th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1973-obv-rcmp_100th_anniversary-thumb.png"
+                            alt="1973 quarter - Rcmp 100Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1973-obv-rcmp_100th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-1992-british_columbia" class="row striped">
+                    <p class="coin-heading">
+                        1992 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1992-rev-british_columbia-thumb.png"
+                            alt="1992 quarter - British Columbia" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1992-rev-british_columbia.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1992-obv-british_columbia-thumb.png"
+                            alt="1992 quarter - British Columbia" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1992-obv-british_columbia.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-1992-manitoba" class="row striped">
+                    <p class="coin-heading">
+                        1992 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1992-rev-manitoba-thumb.png"
+                            alt="1992 quarter - Manitoba" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1992-rev-manitoba.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1992-obv-manitoba-thumb.png"
+                            alt="1992 quarter - Manitoba" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1992-obv-manitoba.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-1992-new_brunswick" class="row striped">
+                    <p class="coin-heading">
+                        1992 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1992-rev-new_brunswick-thumb.png"
+                            alt="1992 quarter - New Brunswick" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1992-rev-new_brunswick.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1992-obv-new_brunswick-thumb.png"
+                            alt="1992 quarter - New Brunswick" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1992-obv-new_brunswick.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-1992-nova_scotia" class="row striped">
+                    <p class="coin-heading">
+                        1992 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1992-rev-nova_scotia-thumb.png"
+                            alt="1992 quarter - Nova Scotia" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1992-rev-nova_scotia.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1992-obv-nova_scotia-thumb.png"
+                            alt="1992 quarter - Nova Scotia" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1992-obv-nova_scotia.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-1992-prince_edward_island" class="row striped">
+                    <p class="coin-heading">
+                        1992 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1992-rev-prince_edward_island-thumb.png"
+                            alt="1992 quarter - Prince Edward Island" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1992-rev-prince_edward_island.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1992-obv-prince_edward_island-thumb.png"
+                            alt="1992 quarter - Prince Edward Island" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1992-obv-prince_edward_island.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-1999-april" class="row striped">
+                    <p class="coin-heading">
+                        1999 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1999-rev-april-thumb.png"
+                            alt="1999 quarter - April" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1999-rev-april.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1999-obv-april-thumb.png"
+                            alt="1999 quarter - April" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1999-obv-april.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-1999-august" class="row striped">
+                    <p class="coin-heading">
+                        1999 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1999-rev-august-thumb.png"
+                            alt="1999 quarter - August" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1999-rev-august.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1999-obv-august-thumb.png"
+                            alt="1999 quarter - August" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1999-obv-august.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-1999-february" class="row striped">
+                    <p class="coin-heading">
+                        1999 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1999-rev-february-thumb.png"
+                            alt="1999 quarter - February" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1999-rev-february.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1999-obv-february-thumb.png"
+                            alt="1999 quarter - February" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1999-obv-february.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-1999-september" class="row striped">
+                    <p class="coin-heading">
+                        1999 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1999-rev-september-thumb.png"
+                            alt="1999 quarter - September" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1999-rev-september.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-1999-obv-september-thumb.png"
+                            alt="1999 quarter - September" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-1999-obv-september.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2000-celebration" class="row striped">
+                    <p class="coin-heading">
+                        2000 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2000-rev-celebration-thumb.png"
+                            alt="2000 quarter - Celebration" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2000-rev-celebration.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2000-obv-celebration-thumb.png"
+                            alt="2000 quarter - Celebration" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2000-obv-celebration.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2000-creativity" class="row striped">
+                    <p class="coin-heading">
+                        2000 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2000-rev-creativity-thumb.png"
+                            alt="2000 quarter - Creativity" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2000-rev-creativity.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2000-obv-creativity-thumb.png"
+                            alt="2000 quarter - Creativity" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2000-obv-creativity.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2000-family" class="row striped">
+                    <p class="coin-heading">
+                        2000 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2000-rev-family-thumb.png"
+                            alt="2000 quarter - Family" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2000-rev-family.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2000-obv-family-thumb.png"
+                            alt="2000 quarter - Family" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2000-obv-family.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2000-freedom" class="row striped">
+                    <p class="coin-heading">
+                        2000 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2000-rev-freedom-thumb.png"
+                            alt="2000 quarter - Freedom" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2000-rev-freedom.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2000-obv-freedom-thumb.png"
+                            alt="2000 quarter - Freedom" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2000-obv-freedom.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2000-harmony" class="row striped">
+                    <p class="coin-heading">
+                        2000 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2000-rev-harmony-thumb.png"
+                            alt="2000 quarter - Harmony" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2000-rev-harmony.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2000-obv-harmony-thumb.png"
+                            alt="2000 quarter - Harmony" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2000-obv-harmony.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2000-natural_legacy" class="row striped">
+                    <p class="coin-heading">
+                        2000 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2000-rev-natural_legacy-thumb.png"
+                            alt="2000 quarter - Natural Legacy" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2000-rev-natural_legacy.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2000-obv-natural_legacy-thumb.png"
+                            alt="2000 quarter - Natural Legacy" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2000-obv-natural_legacy.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2000-pride" class="row striped">
+                    <p class="coin-heading">
+                        2000 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2000-rev-pride-thumb.png"
+                            alt="2000 quarter - Pride" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2000-rev-pride.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2000-obv-pride-thumb.png"
+                            alt="2000 quarter - Pride" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2000-obv-pride.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2002-canada_day" class="row striped">
+                    <p class="coin-heading">
+                        2002 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2002-rev-canada_day-thumb.png"
+                            alt="2002 quarter - Canada Day" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2002-rev-canada_day.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2002-obv-canada_day-thumb.png"
+                            alt="2002 quarter - Canada Day" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2002-obv-canada_day.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2005-saskatchewan" class="row striped">
+                    <p class="coin-heading">
+                        2005 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2005-rev-saskatchewan-thumb.png"
+                            alt="2005 quarter - Saskatchewan" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2005-rev-saskatchewan.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2005-obv-saskatchewan-thumb.png"
+                            alt="2005 quarter - Saskatchewan" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2005-obv-saskatchewan.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2005-year_of_the_veteran" class="row striped">
+                    <p class="coin-heading">
+                        2005 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2005-rev-year_of_the_veteran-thumb.png"
+                            alt="2005 quarter - Year Of The Veteran" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2005-rev-year_of_the_veteran.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2005-obv-year_of_the_veteran-thumb.png"
+                            alt="2005 quarter - Year Of The Veteran" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2005-obv-year_of_the_veteran.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2006-medal_of_bravery" class="row striped">
+                    <p class="coin-heading">
+                        2006 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2006-rev-medal_of_bravery-thumb.png"
+                            alt="2006 quarter - Medal Of Bravery" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2006-rev-medal_of_bravery.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2006-obv-medal_of_bravery-thumb.png"
+                            alt="2006 quarter - Medal Of Bravery" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2006-obv-medal_of_bravery.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2006-pink_ribbon" class="row striped">
+                    <p class="coin-heading">
+                        2006 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2006-rev-pink_ribbon-thumb.png"
+                            alt="2006 quarter - Pink Ribbon" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2006-rev-pink_ribbon.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2006-obv-pink_ribbon-thumb.png"
+                            alt="2006 quarter - Pink Ribbon" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2006-obv-pink_ribbon.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2007-olympic_ice_hockey" class="row striped">
+                    <p class="coin-heading">
+                        2007 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2007-rev-olympic_ice_hockey-thumb.png"
+                            alt="2007 quarter - Olympic Ice Hockey" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2007-rev-olympic_ice_hockey.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2007-obv-olympic_ice_hockey-thumb.png"
+                            alt="2007 quarter - Olympic Ice Hockey" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2007-obv-olympic_ice_hockey.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2007-paralympic_wheelchair_curling" class="row striped">
+                    <p class="coin-heading">
+                        2007 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2007-rev-paralympic_wheelchair_curling-thumb.png"
+                            alt="2007 quarter - Paralympic Wheelchair Curling" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2007-rev-paralympic_wheelchair_curling.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2007-obv-paralympic_wheelchair_curling-thumb.png"
+                            alt="2007 quarter - Paralympic Wheelchair Curling" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2007-obv-paralympic_wheelchair_curling.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2008-olympic_bobsleigh" class="row striped">
+                    <p class="coin-heading">
+                        2008 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2008-rev-olympic_bobsleigh-thumb.png"
+                            alt="2008 quarter - Olympic Bobsleigh" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2008-rev-olympic_bobsleigh.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2008-obv-olympic_bobsleigh-thumb.png"
+                            alt="2008 quarter - Olympic Bobsleigh" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2008-obv-olympic_bobsleigh.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2008-olympic_figure_skating" class="row striped">
+                    <p class="coin-heading">
+                        2008 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2008-rev-olympic_figure_skating-thumb.png"
+                            alt="2008 quarter - Olympic Figure Skating" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2008-rev-olympic_figure_skating.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2008-obv-olympic_figure_skating-thumb.png"
+                            alt="2008 quarter - Olympic Figure Skating" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2008-obv-olympic_figure_skating.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2008-olympic_snowboarding" class="row striped">
+                    <p class="coin-heading">
+                        2008 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2008-rev-olympic_snowboarding-thumb.png"
+                            alt="2008 quarter - Olympic Snowboarding" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2008-rev-olympic_snowboarding.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2008-obv-olympic_snowboarding-thumb.png"
+                            alt="2008 quarter - Olympic Snowboarding" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2008-obv-olympic_snowboarding.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2009-olympic_men's_ice_hockey" class="row striped">
+                    <p class="coin-heading">
+                        2009 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2009-rev-olympic_men's_ice_hockey-coloured-thumb.png"
+                            alt="2009 quarter - Olympic Men'S Ice Hockey" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2009-rev-olympic_men&apos;s_ice_hockey.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2009-obv-olympic_men's_ice_hockey-coloured-thumb.png"
+                            alt="2009 quarter - Olympic Men'S Ice Hockey" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2009-obv-olympic_men&apos;s_ice_hockey.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2009-olympic_men's_ice_hockey" class="row striped">
+                    <p class="coin-heading">
+                        2009 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2009-rev-olympic_men's_ice_hockey-thumb.png"
+                            alt="2009 quarter - Olympic Men'S Ice Hockey" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2009-rev-olympic_men&apos;s_ice_hockey.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2009-obv-olympic_men's_ice_hockey-thumb.png"
+                            alt="2009 quarter - Olympic Men'S Ice Hockey" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2009-obv-olympic_men&apos;s_ice_hockey.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2009-paralympic_sledge_hockey" class="row striped">
+                    <p class="coin-heading">
+                        2009 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2009-rev-paralympic_sledge_hockey-thumb.png"
+                            alt="2009 quarter - Paralympic Sledge Hockey" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2009-rev-paralympic_sledge_hockey.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2009-obv-paralympic_sledge_hockey-thumb.png"
+                            alt="2009 quarter - Paralympic Sledge Hockey" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2009-obv-paralympic_sledge_hockey.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2011-peregine_falcon_coloured" class="row striped">
+                    <p class="coin-heading">
+                        2011 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2011-rev-peregine_falcon_coloured-thumb.png"
+                            alt="2011 quarter - Peregine Falcon Coloured" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2011-rev-peregine_falcon_coloured.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2011-obv-peregine_falcon_coloured-thumb.png"
+                            alt="2011 quarter - Peregine Falcon Coloured" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2011-obv-peregine_falcon_coloured.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2011-wood_bison" class="row striped">
+                    <p class="coin-heading">
+                        2011 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2011-rev-wood_bison-thumb.png"
+                            alt="2011 quarter - Wood Bison" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2011-rev-wood_bison.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2011-obv-wood_bison-thumb.png"
+                            alt="2011 quarter - Wood Bison" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2011-obv-wood_bison.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2011-wood_bison_coloured" class="row striped">
+                    <p class="coin-heading">
+                        2011 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2011-rev-wood_bison_coloured-thumb.png"
+                            alt="2011 quarter - Wood Bison Coloured" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2011-rev-wood_bison_coloured.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2011-obv-wood_bison_coloured-thumb.png"
+                            alt="2011 quarter - Wood Bison Coloured" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2011-obv-wood_bison_coloured.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2012-1812_sir_isaac_brock" class="row striped">
+                    <p class="coin-heading">
+                        2012 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2012-rev-1812_sir_isaac_brock-thumb.png"
+                            alt="2012 quarter - 1812 Sir Isaac Brock" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2012-rev-1812_sir_isaac_brock.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2012-obv-1812_sir_isaac_brock-thumb.png"
+                            alt="2012 quarter - 1812 Sir Isaac Brock" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2012-obv-1812_sir_isaac_brock.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2013-1812_charles+michael_de_salaberry_coloured" class="row striped">
+                    <p class="coin-heading">
+                        2013 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2013-rev-1812_charles+michael_de_salaberry_coloured-thumb.png"
+                            alt="2013 quarter - 1812 Charles-Michael De Salaberry Coloured" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2013-rev-1812_charles+michael_de_salaberry_coloured.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2013-obv-1812_charles+michael_de_salaberry_coloured-thumb.png"
+                            alt="2013 quarter - 1812 Charles-Michael De Salaberry Coloured" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2013-obv-1812_charles+michael_de_salaberry_coloured.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2013-1812_laura_secord_coloured" class="row striped">
+                    <p class="coin-heading">
+                        2013 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2013-rev-1812_laura_secord_coloured-thumb.png"
+                            alt="2013 quarter - 1812 Laura Secord Coloured" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2013-rev-1812_laura_secord_coloured.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2013-obv-1812_laura_secord_coloured-thumb.png"
+                            alt="2013 quarter - 1812 Laura Secord Coloured" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2013-obv-1812_laura_secord_coloured.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2013-arctic_expedition" class="row striped">
+                    <p class="coin-heading">
+                        2013 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2013-rev-arctic_expedition-thumb.png"
+                            alt="2013 quarter - Arctic Expedition" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2013-rev-arctic_expedition.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2013-obv-arctic_expedition-thumb.png"
+                            alt="2013 quarter - Arctic Expedition" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2013-obv-arctic_expedition.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2013-life_in_the_north" class="row striped">
+                    <p class="coin-heading">
+                        2013 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2013-rev-life_in_the_north-thumb.png"
+                            alt="2013 quarter - Life In The North" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2013-rev-life_in_the_north.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2013-obv-life_in_the_north-thumb.png"
+                            alt="2013 quarter - Life In The North" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2013-obv-life_in_the_north.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2015-in_flanders_fields_100th_anniversary" class="row striped">
+                    <p class="coin-heading">
+                        2015 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2015-rev-in_flanders_fields_100th_anniversary-thumb.png"
+                            alt="2015 quarter - In Flanders Fields 100Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2015-rev-in_flanders_fields_100th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2015-obv-in_flanders_fields_100th_anniversary-thumb.png"
+                            alt="2015 quarter - In Flanders Fields 100Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2015-obv-in_flanders_fields_100th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2017-canada's_future" class="row striped">
+                    <p class="coin-heading">
+                        2017 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2017-rev-canada's_future-thumb.png"
+                            alt="2017 quarter - Canada'S Future" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2017-rev-canada&apos;s_future.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/quarters/canada/commemorative/thumbs/quarter-2017-obv-canada's_future-thumb.png"
+                            alt="2017 quarter - Canada'S Future" class="w-75" loading="lazy"
+                            onclick="viewImage('quarter-2017-obv-canada&apos;s_future.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer></footer>
+
+        <div id="viewerModal" class="modal" tabindex="-1">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="image-viewer-title" class="modal-title"></h5>
+                    </div>
+                    <div id="image-container" class="modal-body text-center">
+                        <img id="modal-img" class="modal-img h-100" src="" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="./src/image-viewer.js"></script>
+        <script src="./src/striped-rows.js"></script>
+    </body>
+
+</html>

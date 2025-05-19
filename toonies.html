@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+    <head>
+        <meta name="author" content="Kirk Rieberger" />
+        <meta name="color-scheme" content="dark light" />
+        <!-- Required meta tags for Bootstrap (Also just nice-to-haves) -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!--Bootstrap Core Stylesheet -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <!-- Load jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+        <!-- My Stuff -->
+        <title>Toonies | Kirk Rieberger</title>
+        <!-- Robit image from the Mekanism mod for Minecraft by Aidan Brady. Issued under MIT License -->
+        <link rel="icon" href="./resources/Robit.png" type="image/png" />
+        <link rel="stylesheet" href="./styles/general.css">
+    </head>
+
+    <body>
+        <header id="top-nav" class="navbar navbar-expand-sm fixed-top border-bottom">
+            <!-- Apply dark mode before body loads to avoid flicker. Works on html root element. -->
+            <script src="./src/dark-mode.js"></script>
+            <div class="container-fluid">
+                <!-- Navbar Brand - Icon on left side of Navbar -->
+                <a class="navbar-brand" href="./index.html"><img id="brand-image" src="./resources/Robit.png" alt="Home"
+                        width="30" />
+                    Kirk Rieberger</a>
+                <!-- Button for when Navbar gets collapsed -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavCollapse" aria-controls="navbarNavCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Rest of the nav links. The part that actually gets collapsed when shrinking the screen -->
+                <nav id="navbarNavCollapse" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./examples.html">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/KirkRieberger">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                                Page 5
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./coins.html"
+                                data-bs-toggle="dropdown" aria-expanded="false">Coins</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./pennies.html">Pennies</a></li>
+                                <li><a class="dropdown-item" href="./nickels.html">Nickels</a></li>
+                                <li><a class="dropdown-item" href="./dimes.html">Dimes</a></li>
+                                <li><a class="dropdown-item" href="./quarters.html">Quarters</a></li>
+                                <li><a class="dropdown-item" href="./loonies.html">Loonies</a></li>
+                                <li><a class="dropdown-item bg-body-tertiary" href="#">Toonies</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav> <!-- /navbar-collapse -->
+            </div>
+        </header>
+        <div id="page-top"></div>
+        <div class="container border border-3">
+
+            <aside class="offcanvas offcanvas-start">
+                <div class="offcanvas-body">
+                    Text
+                </div>
+            </aside>
+
+            <main class="">
+                <header>
+                    <h1>Toonies</h1>
+                </header>
+                <section class="row">
+                    <p>On this page ........</p>
+                </section>
+                <!-- Standard editions -->
+                <hr />
+                <h2>Commemorative Coins</h2>
+
+                <section id="year-1999-nunavut" class="row striped">
+                    <p class="coin-heading">
+                        1999 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-1999-rev-nunavut-thumb.png"
+                            alt="1999 toonie - Nunavut" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-1999-rev-nunavut.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-1999-obv-nunavut-thumb.png"
+                            alt="1999 toonie - Nunavut" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-1999-obv-nunavut.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2000-knowledge" class="row striped">
+                    <p class="coin-heading">
+                        2000 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2000-rev-knowledge-thumb.png"
+                            alt="2000 toonie - Knowledge" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2000-rev-knowledge.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2000-obv-knowledge-thumb.png"
+                            alt="2000 toonie - Knowledge" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2000-obv-knowledge.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2011-boreal_forest" class="row striped">
+                    <p class="coin-heading">
+                        2011 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2011-rev-boreal_forest-thumb.png"
+                            alt="2011 toonie - Boreal Forest" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2011-rev-boreal_forest.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2011-obv-boreal_forest-thumb.png"
+                            alt="2011 toonie - Boreal Forest" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2011-obv-boreal_forest.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2012-war_of_1812" class="row striped">
+                    <p class="coin-heading">
+                        2012 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2012-rev-war_of_1812-thumb.png"
+                            alt="2012 toonie - War Of 1812" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2012-rev-war_of_1812.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2012-obv-war_of_1812-thumb.png"
+                            alt="2012 toonie - War Of 1812" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2012-obv-war_of_1812.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2014-wait_for_me_daddy" class="row striped">
+                    <p class="coin-heading">
+                        2014 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2014-rev-wait_for_me_daddy-thumb.png"
+                            alt="2014 toonie - Wait For Me Daddy" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2014-rev-wait_for_me_daddy.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2014-obv-wait_for_me_daddy-thumb.png"
+                            alt="2014 toonie - Wait For Me Daddy" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2014-obv-wait_for_me_daddy.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2015-in_flanders_fields_100th_anniversary" class="row striped">
+                    <p class="coin-heading">
+                        2015 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2015-rev-in_flanders_fields_100th_anniversary-thumb.png"
+                            alt="2015 toonie - In Flanders Fields 100Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2015-rev-in_flanders_fields_100th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2015-obv-in_flanders_fields_100th_anniversary-thumb.png"
+                            alt="2015 toonie - In Flanders Fields 100Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2015-obv-in_flanders_fields_100th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2015-john_a_macdonald" class="row striped">
+                    <p class="coin-heading">
+                        2015 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2015-rev-john_a_macdonald-thumb.png"
+                            alt="2015 toonie - John A Macdonald" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2015-rev-john_a_macdonald.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2015-obv-john_a_macdonald-thumb.png"
+                            alt="2015 toonie - John A Macdonald" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2015-obv-john_a_macdonald.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2016-battle_of_the_atlantic_75th_anniversary" class="row striped">
+                    <p class="coin-heading">
+                        2016 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2016-rev-battle_of_the_atlantic_75th_anniversary-thumb.png"
+                            alt="2016 toonie - Battle Of The Atlantic 75Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2016-rev-battle_of_the_atlantic_75th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2016-obv-battle_of_the_atlantic_75th_anniversary-thumb.png"
+                            alt="2016 toonie - Battle Of The Atlantic 75Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2016-obv-battle_of_the_atlantic_75th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2017-battle_of_vimy_ridge_100th_anniversary" class="row striped">
+                    <p class="coin-heading">
+                        2017 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2017-rev-battle_of_vimy_ridge_100th_anniversary-thumb.png"
+                            alt="2017 toonie - Battle Of Vimy Ridge 100Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2017-rev-battle_of_vimy_ridge_100th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2017-obv-battle_of_vimy_ridge_100th_anniversary-thumb.png"
+                            alt="2017 toonie - Battle Of Vimy Ridge 100Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2017-obv-battle_of_vimy_ridge_100th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2017-dance_of_the_spirits" class="row striped">
+                    <p class="coin-heading">
+                        2017 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2017-rev-dance_of_the_spirits-thumb.png"
+                            alt="2017 toonie - Dance Of The Spirits" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2017-rev-dance_of_the_spirits.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2017-obv-dance_of_the_spirits-thumb.png"
+                            alt="2017 toonie - Dance Of The Spirits" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2017-obv-dance_of_the_spirits.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2018-armistice" class="row striped">
+                    <p class="coin-heading">
+                        2018 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2018-rev-armistice-thumb.png"
+                            alt="2018 toonie - Armistice" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2018-rev-armistice.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2018-obv-armistice-thumb.png"
+                            alt="2018 toonie - Armistice" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2018-obv-armistice.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2019-battle_of_normandy_75th_anniversary" class="row striped">
+                    <p class="coin-heading">
+                        2019 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2019-rev-battle_of_normandy_75th_anniversary-thumb.png"
+                            alt="2019 toonie - Battle Of Normandy 75Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2019-rev-battle_of_normandy_75th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2019-obv-battle_of_normandy_75th_anniversary-thumb.png"
+                            alt="2019 toonie - Battle Of Normandy 75Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2019-obv-battle_of_normandy_75th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2020-end_of_ww2_75th_anniversary" class="row striped">
+                    <p class="coin-heading">
+                        2020 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2020-rev-end_of_ww2_75th_anniversary-thumb.png"
+                            alt="2020 toonie - End Of Ww2 75Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2020-rev-end_of_ww2_75th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2020-obv-end_of_ww2_75th_anniversary-thumb.png"
+                            alt="2020 toonie - End Of Ww2 75Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2020-obv-end_of_ww2_75th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+                <section id="year-2021-discovery_of_insulin_100th_anniversary" class="row striped">
+                    <p class="coin-heading">
+                        2021 - Elizabeth II - Series
+                    </p>
+                    <div class="col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2021-rev-discovery_of_insulin_100th_anniversary-thumb.png"
+                            alt="2021 toonie - Discovery Of Insulin 100Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2021-rev-discovery_of_insulin_100th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-6">
+                        <img src="./resources/coins/toonies/canada/commemorative/thumbs/toonie-2021-obv-discovery_of_insulin_100th_anniversary-thumb.png"
+                            alt="2021 toonie - Discovery Of Insulin 100Th Anniversary" class="w-75" loading="lazy"
+                            onclick="viewImage('toonie-2021-obv-discovery_of_insulin_100th_anniversary.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer></footer>
+
+        <div id="viewerModal" class="modal" tabindex="-1">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="image-viewer-title" class="modal-title"></h5>
+                    </div>
+                    <div id="image-container" class="modal-body text-center">
+                        <img id="modal-img" class="modal-img h-100" src="" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="./src/image-viewer.js"></script>
+        <script src="./src/striped-rows.js"></script>
+    </body>
+
+</html>
