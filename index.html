@@ -28,7 +28,9 @@
     </head>
 
     <body>
-        <header id="top-nav" class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark border-bottom">
+        <header id="top-nav" class="navbar navbar-expand-sm fixed-top border-bottom">
+            <!-- Apply dark mode before body loads to avoid flicker. Works on html root element. -->
+            <script src="./src/dark-mode.js"></script>
             <div class="container-fluid">
                 <!-- Navbar Brand - Icon on left side of Navbar -->
                 <a class="navbar-brand" href="./index.html"><img id="brand-image" src="./resources/Robit.png" alt="Home"
