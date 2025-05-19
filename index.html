@@ -1,231 +1,232 @@
 <!DOCTYPE html>
 <html lang="en-CA">
 
-<!-- TODO: Implement PHPMailer on form -->
+    <!-- TODO: Implement PHPMailer on form -->
 
-<head>
-    <meta name="author" content="Kirk Rieberger" />
-    <meta name="color-scheme" content="dark light" />
-    <!-- Required meta tags for Bootstrap (Also just nice-to-haves) -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <head>
+        <meta name="author" content="Kirk Rieberger" />
+        <meta name="color-scheme" content="dark light" />
+        <!-- Required meta tags for Bootstrap (Also just nice-to-haves) -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!--Bootstrap Core Stylesheet -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!--Bootstrap Core Stylesheet -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- Load jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <!-- Load jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-    <!-- My Stuff -->
-    <link rel="stylesheet" href="./styles/index.css" />
-    <title>Home | Kirk Rieberger</title>
-    <!-- Robit image from the Mekanism mod for Minecraft by Aidan Brady. Issued under MIT License -->
-    <link rel="icon" href="./resources/Robit.png" type="image/png" />
-    <link rel="stylesheet" href="./styles/general.css">
-</head>
+        <!-- My Stuff -->
+        <link rel="stylesheet" href="./styles/index.css" />
+        <title>Home | Kirk Rieberger</title>
+        <!-- Robit image from the Mekanism mod for Minecraft by Aidan Brady. Issued under MIT License -->
+        <link rel="icon" href="./resources/Robit.png" type="image/png" />
+        <link rel="stylesheet" href="./styles/general.css">
+    </head>
 
-<body>
-    <header id="top-nav" class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark border-bottom">
-        <div class="container-fluid">
-            <!-- Navbar Brand - Icon on left side of Navbar -->
-            <a class="navbar-brand" href="./index.html"><img id="brand-image" src="./resources/Robit.png" alt="Home"
-                    width="30" />
-                Kirk Rieberger</a>
-            <!-- Button for when Navbar gets collapsed -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavCollapse"
-                aria-controls="navbarNavCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Rest of the nav links. The part that actually gets collapsed when shrinking the screen -->
-            <nav id="navbarNavCollapse" class="collapse navbar-collapse">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./examples.html">Examples</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/KirkRieberger">GitHub</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                            target="_blank">Page 5</a></li>
-                </ul>
-            </nav> <!-- /navbar-collapse -->
-        </div>
-    </header>
-
-    <div id="page-top"></div>
-    <main class="container border border-3">
-        <article class="row">
-            <div class="col-lg-12">
-                <h2>Home</h2>
-                <hr />
-                <p>
-                    Hello there! I'm Kirk, and right now I'm teaching CPRO 1101 at Red Deer Polytechnic.
-                </p>
-                <p>
-                    This site serves as an example of a basic HTML/CSS/JavaScript site. Below this text is a few
-                    examples of different types of elements. Please take a look and don't be afraid to look at the
-                    source code!
-                </p>
-                <p>
-                    This page is displayed using a <i>Bootstrap Grid</i> layout. There are other layout techniques
-                    available that don't require an external library. The basic CSS layout techniques are:
-                <ul>
-                    <li>Multicol</li>
-                    <li>Flexbox</li>
-                    <li>Grid</li>
-                </ul>
-                </p>
-                <p>
-                    This page may undergo regular updates.
-                </p>
+    <body>
+        <header id="top-nav" class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark border-bottom">
+            <div class="container-fluid">
+                <!-- Navbar Brand - Icon on left side of Navbar -->
+                <a class="navbar-brand" href="./index.html"><img id="brand-image" src="./resources/Robit.png" alt="Home"
+                        width="30" />
+                    Kirk Rieberger</a>
+                <!-- Button for when Navbar gets collapsed -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavCollapse" aria-controls="navbarNavCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Rest of the nav links. The part that actually gets collapsed when shrinking the screen -->
+                <nav id="navbarNavCollapse" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./examples.html">Examples</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/KirkRieberger">GitHub</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                                target="_blank">Page 5</a></li>
+                    </ul>
+                </nav> <!-- /navbar-collapse -->
             </div>
-        </article>
-        <section class="row p-1">
-            <!-- Floyd Table column -->
-            <div class="col-lg-4 p-1 border">
-                <h5 class="text-center">Members of Pink Floyd</h5>
-                <table id="FloydTable" class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col" class="clickable" onclick="headingClick(0)">
-                                First Name<span id="table-sort-0" class="sort-arrow">&#x21D5;</span>
-                            </th>
-                            <th scope="col" class="clickable" onclick="headingClick(1)">
-                                Last Name<span id="table-sort-1" class="sort-arrow">&#x21D5;</span>
-                            </th>
-                            <th scope="col" class="clickable" onclick="headingClick(2)">
-                                Main Instrument<span id="table-sort-2" class="sort-arrow">&#x21D5;</span>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-group-divider">
-                        <tr>
-                            <td>David</td>
-                            <td>Gilmour</td>
-                            <td>Guitar</td>
-                        </tr>
-                        <tr>
-                            <td>Richard</td>
-                            <td>Wright</td>
-                            <td>Keyboards</td>
-                        </tr>
-                        <tr>
-                            <td>Nick</td>
-                            <td>Mason</td>
-                            <td>Drums</td>
-                        </tr>
-                        <tr>
-                            <td>Roger</td>
-                            <td>Waters</td>
-                            <td>Bass</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Image column -->
-            <div class="col-lg-4 p-1 border text-center align-content-center">
-                <a href="https://en.wikipedia.org/wiki/Dickson_Dam">
-                    <img id="dam" class="img-fluid" src="./resources/DicksonDam.jpg"
-                        alt="A photo of the Dickson Dam in Red Deer County, Alberta">
-                </a>
-            </div>
-            <!-- Form column -->
-            <div class="col-lg-4 p-1 border">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h5>Contact Me!</h5>
-                        </div>
-                    </div>
-                    <form id="form" class="needs-validation" action="javascript:submitForm()" novalidate>
-                        <div class="row justify-content-center mb-3">
-                            <div class="col-lg-6">
-                                <label for="fName" class="form-label">First Name</label>
-                                <input id="fName" class="form-control" name="fName" required>
-                            </div>
-                            <div class="col-lg-6">
-                                <label for="lName" class="form-label">Last Name</label>
-                                <input id="lName" class="form-control" name="lName" required>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center mb-3">
-                            <div class="col-lg-12">
-                                <label class="form-label" for="fName">Your Email</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="username" placeholder="Username"
-                                        name="username" required />
-                                    <span class="input-group-text">@</span>
-                                    <input type="text" class="form-control" id="domain" placeholder="Domain"
-                                        name="domain" required />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center mb-3">
-                            <div class="col-lg-6">
-                                <label class="form-label" for="subject">Subject</label>
-                                <select class="form-select" id="subject" name="subject" required>
-                                    <option value="val1" selected>Class Inquiry</option>
-                                    <option value="val2">Feature Request</option>
-                                    <option value="val3">Test in Prod</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-6"></div>
-                        </div>
-                        <div class="row justify-content-center mb-3">
-                            <div class="col-lg-12">
-                                <label class="form-label" for="message">Message</label>
-                                <textarea id="message" class="form-control" placeholder="Your message here"
-                                    name="message" required></textarea>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-lg-2 text-center">
-                                <button type="submit" id="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="container">
-        <div class="row">
-            <p class="col-lg-12">
-                Copyright &copy; Kirk Rieberger 2024 - Issued under CC BY-SA License
-                <br />
-                Powered by GitHub Pages
-            </p>
-        </div>
-    </footer>
+        </header>
 
-    <!-- Toasts/Modals | Not always visible -->
-    <!-- TODO: Modal for success, toast &| form validation on failure -->
-    <div id="form-modal-success" class="modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3>Thanks!</h3>
-                </div>
-                <div class="modal-body">
-                    <p>But this form doesn't actually do anything! Email me at <span id="email-cover"
-                            class="reveal clickable" onclick="revealEmail()">Click to
-                            reveal</span><span id="email" class="hidden">webmaster@rieberger.ca</span> with any
-                        inquiries.
+        <div id="page-top"></div>
+        <main class="container border border-3">
+            <article class="row">
+                <div class="col-lg-12">
+                    <h2>Home</h2>
+                    <hr />
+                    <p>
+                        Hello there! I'm Kirk, and right now I'm teaching CPRO 1101 at Red Deer Polytechnic.
+                    </p>
+                    <p>
+                        This site serves as an example of a basic HTML/CSS/JavaScript site. Below this text is a few
+                        examples of different types of elements. Please take a look and don't be afraid to look at the
+                        source code!
+                    </p>
+                    <p>
+                        This page is displayed using a <i>Bootstrap Grid</i> layout. There are other layout techniques
+                        available that don't require an external library. The basic CSS layout techniques are:
+                    <ul>
+                        <li>Multicol</li>
+                        <li>Flexbox</li>
+                        <li>Grid</li>
+                    </ul>
+                    </p>
+                    <p>
+                        This page may undergo regular updates.
                     </p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                        data-bs-target="form-modal-success">Close</button>
+            </article>
+            <section class="row p-1">
+                <!-- Floyd Table column -->
+                <div class="col-lg-4 p-1 border">
+                    <h5 class="text-center">Members of Pink Floyd</h5>
+                    <table id="FloydTable" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="clickable" onclick="headingClick(0)">
+                                    First Name<span id="table-sort-0" class="sort-arrow">&#x21D5;</span>
+                                </th>
+                                <th scope="col" class="clickable" onclick="headingClick(1)">
+                                    Last Name<span id="table-sort-1" class="sort-arrow">&#x21D5;</span>
+                                </th>
+                                <th scope="col" class="clickable" onclick="headingClick(2)">
+                                    Main Instrument<span id="table-sort-2" class="sort-arrow">&#x21D5;</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <td>David</td>
+                                <td>Gilmour</td>
+                                <td>Guitar</td>
+                            </tr>
+                            <tr>
+                                <td>Richard</td>
+                                <td>Wright</td>
+                                <td>Keyboards</td>
+                            </tr>
+                            <tr>
+                                <td>Nick</td>
+                                <td>Mason</td>
+                                <td>Drums</td>
+                            </tr>
+                            <tr>
+                                <td>Roger</td>
+                                <td>Waters</td>
+                                <td>Bass</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Image column -->
+                <div class="col-lg-4 p-1 border text-center align-content-center">
+                    <a href="https://en.wikipedia.org/wiki/Dickson_Dam">
+                        <img id="dam" class="img-fluid" src="./resources/DicksonDam.jpg"
+                            alt="A photo of the Dickson Dam in Red Deer County, Alberta">
+                    </a>
+                </div>
+                <!-- Form column -->
+                <div class="col-lg-4 p-1 border">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h5>Contact Me!</h5>
+                            </div>
+                        </div>
+                        <form id="form" class="needs-validation" action="javascript:submitForm()" novalidate>
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-lg-6">
+                                    <label for="fName" class="form-label">First Name</label>
+                                    <input id="fName" class="form-control" name="fName" required>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="lName" class="form-label">Last Name</label>
+                                    <input id="lName" class="form-control" name="lName" required>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-lg-12">
+                                    <label class="form-label" for="fName">Your Email</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="username" placeholder="Username"
+                                            name="username" required />
+                                        <span class="input-group-text">@</span>
+                                        <input type="text" class="form-control" id="domain" placeholder="Domain"
+                                            name="domain" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-lg-6">
+                                    <label class="form-label" for="subject">Subject</label>
+                                    <select class="form-select" id="subject" name="subject" required>
+                                        <option value="val1" selected>Class Inquiry</option>
+                                        <option value="val2">Feature Request</option>
+                                        <option value="val3">Test in Prod</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6"></div>
+                            </div>
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-lg-12">
+                                    <label class="form-label" for="message">Message</label>
+                                    <textarea id="message" class="form-control" placeholder="Your message here"
+                                        name="message" required></textarea>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-2 text-center">
+                                    <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="container">
+            <div class="row">
+                <p class="col-lg-12">
+                    Copyright &copy; Kirk Rieberger 2024 - Issued under CC BY-SA License
+                    <br />
+                    Powered by GitHub Pages
+                </p>
+            </div>
+        </footer>
+
+        <!-- Toasts/Modals | Not always visible -->
+        <!-- TODO: Modal for success, toast &| form validation on failure -->
+        <div id="form-modal-success" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Thanks!</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>But this form doesn't actually do anything! Email me at <span id="email-cover"
+                                class="reveal clickable" onclick="revealEmail()">Click to
+                                reveal</span><span id="email" class="hidden">webmaster@rieberger.ca</span> with any
+                            inquiries.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                            data-bs-target="form-modal-success">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="./src/dark-mode.js"></script>
-    <script src="./src/main-index.js"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="./src/dark-mode.js"></script>
+        <script src="./src/main-index.js"></script>
+    </body>
 
 </html>
