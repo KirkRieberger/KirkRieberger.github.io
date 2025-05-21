@@ -18,20 +18,20 @@
             integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
         <!-- My Stuff -->
-        <title>Coins | Kirk Rieberger</title>
+        <title>Dimes | Kirk Rieberger</title>
         <!-- Robit image from the Mekanism mod for Minecraft by Aidan Brady. Issued under MIT License -->
-        <link rel="icon" href="./resources/Robit.png" type="image/png" />
-        <link rel="stylesheet" href="./styles/general.css">
+        <link rel="icon" href="../../resources/Robit.png" type="image/png" />
+        <link rel="stylesheet" href="../../styles/general.css">
     </head>
 
     <body>
         <header id="top-nav" class="navbar navbar-expand-sm fixed-top border-bottom">
             <!-- Apply dark mode before body loads to avoid flicker. Works on html root element. -->
-            <script src="./src/dark-mode.js"></script>
+            <script src="../../src/dark-mode.js"></script>
             <div class="container-fluid">
                 <!-- Navbar Brand - Icon on left side of Navbar -->
-                <a class="navbar-brand" href="./index.html"><img id="brand-image" src="./resources/Robit.png" alt="Home"
-                        width="30" />
+                <a class="navbar-brand" href="../../index.html"><img id="brand-image" src="../../resources/Robit.png"
+                        alt="Home" width="30" />
                     Kirk Rieberger</a>
                 <!-- Button for when Navbar gets collapsed -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -43,13 +43,13 @@
                 <nav id="navbarNavCollapse" class="collapse navbar-collapse">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href=".index.html">Home</a>
+                            <a class="nav-link" href="../../index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./examples.html">Examples</a>
+                            <a class="nav-link" href="../../examples.html">Examples</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./about.html">About</a>
+                            <a class="nav-link" href="../../about.html">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://github.com/KirkRieberger">GitHub</a>
@@ -59,22 +59,21 @@
                                 Page 5
                             </a>
                         </li>
-                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" href="./coins.html"
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="../../coins.html"
                                 data-bs-toggle="dropdown" aria-expanded="false">Coins</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./pennies.html">Pennies</a></li>
-                                <li><a class="dropdown-item" href="./nickels.html">Nickels</a></li>
-                                <li><a class="dropdown-item" href="./dimes.html">Dimes</a></li>
-                                <li><a class="dropdown-item" href="./quarters.html">Quarters</a></li>
-                                <li><a class="dropdown-item" href="./loonies.html">Loonies</a></li>
-                                <li><a class="dropdown-item" href="./toonies.html">Toonies</a></li>
+                                <li><a class="dropdown-item" href="../pennies/index.html">Pennies</a></li>
+                                <li><a class="dropdown-item" href="../nickels/index.html">Nickels</a></li>
+                                <li><a class="dropdown-item bg-body-tertiary" href="../dimes/index.html">Dimes</a></li>
+                                <li><a class="dropdown-item" href="../quarters/index.html">Quarters</a></li>
+                                <li><a class="dropdown-item" href="../loonies/index.html">Loonies</a></li>
+                                <li><a class="dropdown-item" href="../toonies/index.html">Toonies</a></li>
                             </ul>
                         </li>
                     </ul>
                 </nav> <!-- /navbar-collapse -->
             </div>
         </header>
-
         <div id="page-top"></div>
         <div class="container border border-3">
 
@@ -83,26 +82,51 @@
                     Text
                 </div>
             </aside>
+
             <main class="">
                 <header>
-                    <h1>Coins</h1>
+                    <h1>Dimes</h1>
                 </header>
                 <section class="row">
-                    <div class="col-auto">
-                        <p>On this page ........</p>
+                    <p>On this page ........</p>
+                </section>
+                <!-- Standard editions -->
+                <section id="year-2017" class="row striped">
+                    <hr />
+                    <p class="coin-heading">
+                        2017 - Elizabeth II - Series
+                    </p>
+                    <div class="col-lg-6">
+                        <img src="../../resources/coins/dimes/canada/standard/thumbs/dime-2017-rev-thumb.png" alt=""
+                            class="w-75" loading="lazy" onclick="viewImage('dime-2017-rev.png', 'canada', 'standard')">
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="../../resources/coins/dimes/canada/standard/thumbs/dime-2017-obv-thumb.png" alt=""
+                            class="w-75" loading="lazy" onclick="viewImage('dime-2017-obv.png', 'canada', 'standard')">
+                    </div>
+                    <div class=" col-lg-12">
+                        Notes:
                     </div>
                 </section>
-                <section class="row">
-                    <div class="col-auto">
-                        Currently working* denominations:
-                        <ul>
-                            <li><a href="./pennies.html">Pennies</a></li>
-                            <li><a href="./nickels.html">Loonies</a></li>
-                            <li><a href="./dimes.html">Loonies</a></li>
-                            <li><a href="./quarters.html">Loonies</a></li>
-                            <li><a href="./loonies.html">Loonies</a></li>
-                            <li><a href="./toonies.html">Loonies</a></li>
-                        </ul>
+                <hr />
+                <h2>Commemorative Coins</h2>
+                <section id="year-2017" class="row striped">
+                    <hr />
+                    <p class="coin-heading">
+                        2001 - Elizabeth II - Series
+                    </p>
+                    <div class="col-lg-6">
+                        <img src="../../resources/coins/dimes/canada/commemorative/thumbs/dime-2001-rev-volunteer-thumb.png"
+                            alt="" class="w-75" loading="lazy"
+                            onclick="viewImage('dime-2001-rev-volunteer.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="../../resources/coins/dimes/canada/commemorative/thumbs/dime-2001-obv-volunteer-thumb.png"
+                            alt="" class="w-75" loading="lazy"
+                            onclick="viewImage('dime-2001-obv-volunteer.png', 'canada', 'commemorative')">
+                    </div>
+                    <div class=" col-lg-12">
+                        Notes:
                     </div>
                 </section>
             </main>
@@ -116,7 +140,7 @@
                     <div class="modal-header">
                         <h5 id="image-viewer-title" class="modal-title"></h5>
                     </div>
-                    <div class="modal-body text-center">
+                    <div id="image-container" class="modal-body text-center">
                         <img id="modal-img" class="modal-img h-100" src="" alt="">
                     </div>
                     <div class="modal-footer">
@@ -129,8 +153,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
-        <script src="./src/image-viewer.js"></script>
-        <script src="./src/striped-rows.js"></script>
+        <script src="../../src/image-viewer.js"></script>
+        <script src="../../src/striped-rows.js"></script>
     </body>
 
 </html>
