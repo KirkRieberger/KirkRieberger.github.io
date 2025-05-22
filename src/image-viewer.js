@@ -48,9 +48,13 @@ String.prototype.toProperCase = function () {
     let i = 0;
     for (substring of temp) {
         switch (substring) {
+            // Possibly store acronyms separately?
             case "rcmp":
                 output += " " + "RCMP";
                 break;
+
+            case "lgbt":
+                output += " " + "LGBT";
 
             case "of":
                 output += " " + "of";
