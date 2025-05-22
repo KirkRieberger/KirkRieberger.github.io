@@ -14,6 +14,7 @@ function viewImage(image, country, type) {
     Returns: Undefined
     */
     let side;
+    let title;
     let splitImage = image.split("-");
     let denom = splitImage[0];
     if (denom == "penny") {
@@ -24,8 +25,13 @@ function viewImage(image, country, type) {
     } else {
         side = "Reverse";
     }
-    let desc = splitImage[3].split(".")[0].replace(/[_]/g, " ").replace("+", "-").toProperCase();
-    let title = `${splitImage[1]} ${splitImage[0].capitalizeFirst()} ${side} - ${desc}`;
+    if (splitImage[3]) {
+        let desc = splitImage[3].split(".")[0].replace(/[_]/g, " ").replace("+", "-").toProperCase();
+        title = `${splitImage[1]} ${splitImage[0].capitalizeFirst()} ${side} - ${desc}`;
+    } else {
+        title = `${splitImage[1]} ${splitImage[0].capitalizeFirst()} ${side}`;
+    }
+
     $("#image-viewer-title").text(title);
     $("#modal-img").attr("src", "");
     $("#modal-img").attr("src", `../../resources/coins/${denom}s/${country}/${type}/full/${image}`);
