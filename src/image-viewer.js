@@ -63,6 +63,10 @@ String.prototype.toProperCase = function () {
             case "a":
                 output += " " + "a";
                 break;
+
+            default:
+                output += " " + substring[0].toUpperCase() + substring.slice(1);
+                break;
         }
 
         if (i == 0) {
