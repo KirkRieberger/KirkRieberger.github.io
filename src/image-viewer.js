@@ -25,7 +25,7 @@ function viewImage(image, country, type) {
     let title = `${splitImage[1]} ${splitImage[0].capitalizeFirst()} ${side}`;
     $("#image-viewer-title").text(title);
     $("#modal-img").attr("src", "");
-    $("#modal-img").attr("src", `./resources/coins/${denom}s/${country}/${type}/full/${image}`);
+    $("#modal-img").attr("src", `../../resources/coins/${denom}s/${country}/${type}/full/${image}`);
     viewerModal.show()
 }
 
