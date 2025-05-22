@@ -35,6 +35,7 @@ function viewImage(image, country, type) {
     $("#image-viewer-title").text(title);
     $("#modal-img").attr("src", "");
     $("#modal-img").attr("src", `../../resources/coins/${denom}s/${country}/${type}/full/${image}`);
+    $('#modal-img-link').attr("href", `../../resources/coins/${denom}s/${country}/${type}/full/${image}`);
     viewerModal.show();
 }
 
