@@ -47,18 +47,30 @@ String.prototype.toProperCase = function () {
     let temp = this.split(" ");
     let i = 0;
     for (substring of temp) {
-        if (substring == "rcmp") {
-            output += " " + "RCMP";
-        } else if (i == 0) {
-            output += substring[0].toUpperCase() + substring.slice(1);
-        } else if (substring == "of") {
-            output += " " + "of";
-        } else if (substring == "the") {
-            output += " " + "the";
-        } else {
-            output += " " + substring[0].toUpperCase() + substring.slice(1);
+        switch (substring) {
+            case "rcmp":
+                output += " " + "RCMP";
+                break;
+
+            case "of":
+                output += " " + "of";
+                break;
+
+            case "the":
+                output += " " + "the";
+                break;
+
+            case "a":
+                output += " " + "a";
+                break;
         }
-        i = i + 1;
+
+        if (i == 0) {
+            output += substring[0].toUpperCase() + substring.slice(1);
+        }
+
+        i++;
+
     }
     return output;
 }
