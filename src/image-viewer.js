@@ -8,6 +8,8 @@ function viewImage(image, country, type) {
         image - The file name of the requested image
                 Format:  coin-year-side.type
                 Example: dime-2006-obv.jpeg
+                Format:  coin-year-side-description_hyphenated+words.png
+                Example: quarter-2013-rev-1812_charles+michael_de_salaberry_coloured.png
 
     Returns: Undefined
     */
@@ -22,11 +24,12 @@ function viewImage(image, country, type) {
     } else {
         side = "Reverse";
     }
-    let title = `${splitImage[1]} ${splitImage[0].capitalizeFirst()} ${side}`;
+    let desc = splitImage[3].split(".")[0].replace(/[_]/g, " ").replace("+", "-").toProperCase();
+    let title = `${splitImage[1]} ${splitImage[0].capitalizeFirst()} ${side} - ${desc}`;
     $("#image-viewer-title").text(title);
     $("#modal-img").attr("src", "");
     $("#modal-img").attr("src", `../../resources/coins/${denom}s/${country}/${type}/full/${image}`);
-    viewerModal.show()
+    viewerModal.show();
 }
 
 String.prototype.capitalizeFirst = function () {
@@ -38,8 +41,14 @@ String.prototype.toProperCase = function () {
     let temp = this.split(" ");
     let i = 0;
     for (substring of temp) {
-        if (i == 0) {
+        if (substring == "rcmp") {
+            output += " " + "RCMP";
+        } else if (i == 0) {
             output += substring[0].toUpperCase() + substring.slice(1);
+        } else if (substring == "of") {
+            output += " " + "of";
+        } else if (substring == "the") {
+            output += " " + "the";
         } else {
             output += " " + substring[0].toUpperCase() + substring.slice(1);
         }
