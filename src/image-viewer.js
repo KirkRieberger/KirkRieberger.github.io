@@ -46,15 +46,9 @@ String.prototype.toProperCase = function () {
     let output = "";
     let temp = this.split(" ");
     let i = 0;
+    let acronyms = ["rcmp", "lgbt", "un"];
     for (substring of temp) {
         switch (substring) {
-            // Possibly store acronyms separately?
-            case "rcmp":
-                output += " " + "RCMP";
-                break;
-
-            case "lgbt":
-                output += " " + "LGBT";
 
             case "of":
                 output += " " + "of";
@@ -68,17 +62,21 @@ String.prototype.toProperCase = function () {
                 output += " " + "a";
                 break;
 
+            case "macgill":
+                output += " " + "MacGill";
+                break;
+
             default:
-                output += " " + substring[0].toUpperCase() + substring.slice(1);
+                if (acronyms.includes(substring)) {
+                    output += " " + substring.toUpperCase();
+                } else if (i == 0) {
+                    output += substring[0].toUpperCase() + substring.slice(1);
+                } else {
+                    output += " " + substring[0].toUpperCase() + substring.slice(1);
+                }
                 break;
         }
-
-        if (i == 0) {
-            output += substring[0].toUpperCase() + substring.slice(1);
-        }
-
         i++;
-
     }
     return output;
 }
