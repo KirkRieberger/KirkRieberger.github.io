@@ -71,6 +71,14 @@ String.prototype.toProperCase = function () {
                 output += " " + "de";
                 break;
 
+            case "ww2":
+                output += " " + "WW2";
+                break;
+
+            case "ww1":
+                output += " " + "WW1";
+                break;
+
             default:
                 if (acronyms.includes(substring)) {
                     output += " " + substring.toUpperCase();
