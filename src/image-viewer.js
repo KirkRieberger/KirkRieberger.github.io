@@ -67,9 +67,24 @@ String.prototype.toProperCase = function () {
                 output += " " + "MacGill";
                 break;
 
+            case "de":
+                output += " " + "de";
+                break;
+
             default:
                 if (acronyms.includes(substring)) {
                     output += " " + substring.toUpperCase();
+                } else if (substring.split("-").length > 1) {
+                    let recurseTemp = substring.split("-");
+                    let j = 0;
+                    for (recurseSubstring of recurseTemp) {
+                        if (j == 0) {
+                            output += " " + recurseSubstring.toProperCase();
+                        } else {
+                            output += "-" + recurseSubstring.toProperCase();
+                        }
+                        j++;
+                    }
                 } else if (i == 0) {
                     output += substring[0].toUpperCase() + substring.slice(1);
                 } else {
