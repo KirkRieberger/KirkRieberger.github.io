@@ -25,7 +25,7 @@ def main():
             # Gives: ["denomination", "year", "side", "special_info_or_name"[, "thumb"].png]
             denom = filenameParts[0]
             year = filenameParts[1]
-            side = filenameParts[2]
+            # side = filenameParts[2]
             if len(filenameParts) > 4:
                 alt = filenameParts[3].replace(
                     "_", " ").replace("+", "-").title()
@@ -47,7 +47,7 @@ def main():
                     filenameParts[1] + "-" + filenameParts[2] + ".png"
                 viewNameObv = filenameParts[0] + "-" + \
                     filenameParts[1] + "-obv" + ".png"
-            filenameObv = file.replace("rev", "obv")
+            # filenameObv = file.replace("rev", "obv")
 
             elementOut = f"""
             <section id="year-{year}-{info}" class="row striped">
