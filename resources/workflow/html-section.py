@@ -54,11 +54,11 @@ def main():
                 <p class="coin-heading">
                     {year} - {obvFace} - Series
                 </p>
-                <div class="col-6">
+                <div class="col-6 text-center">
                     <img src="{path}"
                         alt="{year} {denom} - {alt}" class="w-75" loading="lazy" onclick='viewImage("{viewName}", "{country}", "{coinType}")'>
                 </div>
-                <div class=" col-6">
+                <div class=" col-6 text-center">
                     <img src="{pathObv}"
                         alt="{year} {denom} - {alt}" class="w-75" loading="lazy" onclick='viewImage("{viewNameObv}", "{country}", "{coinType}")'>
                 </div>
