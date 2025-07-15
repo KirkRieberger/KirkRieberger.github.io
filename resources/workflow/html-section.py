@@ -26,17 +26,20 @@ def main():
             denom = filenameParts[0]
             year = filenameParts[1]
             side = filenameParts[2]
-            if filenameParts[3]:
+            if len(filenameParts) > 4:
                 alt = filenameParts[3].replace(
                     "_", " ").replace("+", "-").title()
                 info = filenameParts[3]
-                if filenameParts[4]:
+
+                # What is this for?
+                if len(filenameParts) == 5:
                     viewName = filenameParts[0] + "-" + filenameParts[1] + "-" + \
                         filenameParts[2] + "-" + \
                         filenameParts[3].replace("'", "&apos;") + ".png"
                     viewNameObv = filenameParts[0] + "-" + filenameParts[1] + \
                         "-obv-" + \
                         filenameParts[3].replace("'", "&apos;") + ".png"
+                # /What
             else:
                 info = ""
                 alt = ""
