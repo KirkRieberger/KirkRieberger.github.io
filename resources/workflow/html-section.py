@@ -1,8 +1,7 @@
-#! ./.venv/bin/python
 
 def main():
     try:
-        with open("paths.txt") as f:
+        with open("paths.txt", "r") as f:
             files = f.read().splitlines()
         settings = files.pop(0).split(",")
         obvFace = settings[0]
@@ -16,7 +15,7 @@ def main():
         # with implied side matching (note rev -> obv):
         # ./resources/coins/pennies/canada/commemorative/thumbs/penny-1967-obv-centennial-thumb.png
         for file in files:
-            path = dirPath + file
+            path = "../." + dirPath + file
             # Assumes side is always reverse
             pathObv = path.replace("rev", "obv")
             # Gives: [".", "resources", "coins", "denomination", "country","type", "size", "filename"]
@@ -28,16 +27,23 @@ def main():
             year = filenameParts[1]
             side = filenameParts[2]
             if filenameParts[3]:
-                alt = filenameParts[3].replace("_", " ").replace("+", "-").title()
+                alt = filenameParts[3].replace(
+                    "_", " ").replace("+", "-").title()
                 info = filenameParts[3]
                 if filenameParts[4]:
-                    viewName = filenameParts[0] + "-" + filenameParts[1] + "-" + filenameParts[2] + "-" + filenameParts[3].replace("'", "&apos;") + ".png"
-                    viewNameObv = filenameParts[0] + "-" + filenameParts[1] + "-obv-" + filenameParts[3].replace("'", "&apos;") + ".png"
+                    viewName = filenameParts[0] + "-" + filenameParts[1] + "-" + \
+                        filenameParts[2] + "-" + \
+                        filenameParts[3].replace("'", "&apos;") + ".png"
+                    viewNameObv = filenameParts[0] + "-" + filenameParts[1] + \
+                        "-obv-" + \
+                        filenameParts[3].replace("'", "&apos;") + ".png"
             else:
                 info = ""
                 alt = ""
-                viewName = filenameParts[0] + "-" + filenameParts[1] + "-" + filenameParts[2] + ".png"
-                viewNameObv = filenameParts[0] + "-" + filenameParts[1] + "-obv" + ".png"
+                viewName = filenameParts[0] + "-" + \
+                    filenameParts[1] + "-" + filenameParts[2] + ".png"
+                viewNameObv = filenameParts[0] + "-" + \
+                    filenameParts[1] + "-obv" + ".png"
             filenameObv = file.replace("rev", "obv")
 
             elementOut = f"""
@@ -59,8 +65,11 @@ def main():
             </section>"""
 
             outFile.write(elementOut)
+    except Exception as e:
+        print(e)
     finally:
         outFile.close()
+
 
 if __name__ == "__main__":
     main()
