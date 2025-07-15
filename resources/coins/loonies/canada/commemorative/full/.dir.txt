@@ -8,6 +8,8 @@ loonie-1995-obv-peacekeeping_monument.png
 loonie-1995-rev-peacekeeping_monument.png
 loonie-2005-obv-terry_fox.png
 loonie-2005-rev-terry_fox.png
+loonie-2010-obv-navy_centennial.png
+loonie-2010-rev-navy_centennial.png
 loonie-2011-obv-parks_canada.png
 loonie-2011-rev-parks_canada.png
 loonie-2012-obv-grey_cup.png
@@ -26,3 +28,5 @@ loonie-2020-obv-un_charter.png
 loonie-2020-rev-un_charter.png
 loonie-2023-obv-elsie_macgill.png
 loonie-2023-rev-elsie_macgill.png
+loonie-2024-obv-l.m._montgomery.png
+loonie-2024-rev-l.m._montgomery.png
