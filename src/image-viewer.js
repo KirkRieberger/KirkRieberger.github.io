@@ -27,9 +27,19 @@ function viewImage(image, country, type) {
     }
     if (splitImage[3]) {
         let desc = splitImage[3].split(".")[0].replace(/[_]/g, " ").replace("+", "-").toProperCase();
-        title = `${splitImage[1]} ${splitImage[0].capitalizeFirst()} ${side} - ${desc}`;
+        if (denom == "voyageur+dollar") {
+            title = `${splitImage[1]} Voyageur Dollar ${side} - ${desc}`;
+            denom = "loonie"
+        } else {
+            title = `${splitImage[1]} ${splitImage[0].capitalizeFirst()} ${side} - ${desc}`;
+        }
     } else {
-        title = `${splitImage[1]} ${splitImage[0].capitalizeFirst()} ${side}`;
+        if (denom == "voyageur+dollar") {
+            title = `${splitImage[1]} Voyageur Dollar ${side}`;
+            denom = "loonie"
+        } else {
+            title = `${splitImage[1]} ${splitImage[0].capitalizeFirst()} ${side}`;
+        }
     }
 
     $("#image-viewer-title").text(title);
