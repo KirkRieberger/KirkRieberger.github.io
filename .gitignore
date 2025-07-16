@@ -6,3 +6,6 @@ examples/assign-1-example/*
 test.*
 temp.*
 participation
+elements-out.txt
+paths.txt
+*.bak
