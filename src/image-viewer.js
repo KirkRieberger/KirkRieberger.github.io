@@ -20,13 +20,13 @@ function viewImage(image, country, type) {
     if (denom == "penny") {
         denom = "pennie"
     }
-    if (splitImage[2].split(".")[0] == "obv") {
+    if (splitImage[2].split(".")[0] == "obv") { // Split again to strip file extension
         side = "Obverse";
     } else {
         side = "Reverse";
     }
     if (splitImage[3]) {
-        let desc = splitImage[3].split(".")[0].replace(/[_]/g, " ").replace("+", "-").toProperCase();
+        let desc = splitImage[3].split(".png")[0].replace(/[_]/g, " ").replace("+", "-").toProperCase();
         if (denom == "voyageur+dollar") {
             title = `${splitImage[1]} Voyageur Dollar ${side} - ${desc}`;
             denom = "loonie"
