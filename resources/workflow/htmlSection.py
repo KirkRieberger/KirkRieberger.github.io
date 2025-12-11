@@ -26,13 +26,13 @@ def main():
             denom = filenameParts[0]
             year = filenameParts[1]
             # side = filenameParts[2]
-            if len(filenameParts) > 4:
-                alt = filenameParts[3].replace(
-                    "_", " ").replace("+", "-").title()
-                info = filenameParts[3]
-
-                # What is this for?
+            if len(filenameParts) > 4:  # Commemorative
+                # Non-coloured
                 if len(filenameParts) == 5:
+                    alt = filenameParts[3].replace(
+                        "_", " ").replace("+", "-").title()
+
+                    info = filenameParts[3]
                     viewName = filenameParts[0] + "-" + filenameParts[1] + "-" + \
                         filenameParts[2] + "-" + \
                         filenameParts[3].replace("'", "&apos;") + ".png"
@@ -40,7 +40,41 @@ def main():
                         "-obv-" + \
                         filenameParts[3].replace("'", "&apos;") + ".png"
                 # /What
-            else:
+                else:
+                    alt = (filenameParts[3].replace("_", " ").replace("+", "-") + " " +
+                           filenameParts[4]).title()
+
+                    info = filenameParts[3] + "_" + filenameParts[4]
+
+                    viewName = filenameParts[0] + "-" + filenameParts[1] + "-" + \
+                        filenameParts[2] + "-" + \
+                        filenameParts[3].replace("'", "&apos;") + "-" + \
+                        filenameParts[4].replace("'", "&apos;") + ".png"
+
+                    viewNameObv = filenameParts[0] + "-" + filenameParts[1] + \
+                        "-obv-" + \
+                        filenameParts[3].replace("'", "&apos;") + "-" + \
+                        filenameParts[4].replace("'", "&apos;") + ".png"
+
+                elementOut = f"""
+                <section id="year-{year}-{info}" class="row striped">
+                    <p class="coin-heading">
+                        {year} - {obvFace} - Series
+                    </p>
+                    <div class="col-6 text-center">
+                        <img src="{path}"
+                            alt="{year} {denom} - {alt}" class="w-75" loading="lazy" onclick='viewImage("{viewName}", "{country}", "{coinType}")'>
+                    </div>
+                    <div class=" col-6 text-center">
+                        <img src="{pathObv}"
+                            alt="{year} {denom} - {alt}" class="w-75" loading="lazy" onclick='viewImage("{viewNameObv}", "{country}", "{coinType}")'>
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>"""
+
+            else:  # Non-commemorative
                 info = ""
                 alt = ""
                 viewName = filenameParts[0] + "-" + \
@@ -49,23 +83,23 @@ def main():
                     filenameParts[1] + "-obv" + ".png"
             # filenameObv = file.replace("rev", "obv")
 
-            elementOut = f"""
-            <section id="year-{year}-{info}" class="row striped">
-                <p class="coin-heading">
-                    {year} - {obvFace} - Series
-                </p>
-                <div class="col-6 text-center">
-                    <img src="{path}"
-                        alt="{year} {denom} - {alt}" class="w-75" loading="lazy" onclick='viewImage("{viewName}", "{country}", "{coinType}")'>
-                </div>
-                <div class=" col-6 text-center">
-                    <img src="{pathObv}"
-                        alt="{year} {denom} - {alt}" class="w-75" loading="lazy" onclick='viewImage("{viewNameObv}", "{country}", "{coinType}")'>
-                </div>
-                <div class=" col-12">
-                    Notes:
-                </div>
-            </section>"""
+                elementOut = f"""
+                <section id="year-{year}" class="row striped">
+                    <p class="coin-heading">
+                        {year} - {obvFace} - Series
+                    </p>
+                    <div class="col-6 text-center">
+                        <img src="{path}"
+                            alt="{year} {denom} - {alt}" class="w-75" loading="lazy" onclick='viewImage("{viewName}", "{country}", "{coinType}")'>
+                    </div>
+                    <div class=" col-6 text-center">
+                        <img src="{pathObv}"
+                            alt="{year} {denom} - {alt}" class="w-75" loading="lazy" onclick='viewImage("{viewNameObv}", "{country}", "{coinType}")'>
+                    </div>
+                    <div class=" col-12">
+                        Notes:
+                    </div>
+                </section>"""
 
             outFile.write(elementOut)
     except Exception as e:
