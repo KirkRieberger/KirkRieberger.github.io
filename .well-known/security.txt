@@ -1,0 +1,4 @@
+Contact: mailto:webmaster@rieberger.ca
+Expires: 2027-02-16T19:59:00.000Z
+Preferred-Languages: en
+Canonical: https://rieberger.ca/.well-known/security.txt
