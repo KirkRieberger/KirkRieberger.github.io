@@ -1,0 +1,17 @@
+body {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+p {
+    break-inside: avoid;
+}
+
+.container {
+    column-width: 250px;
+}
+
+.box {
+    column-span: all;
+    text-align: center;
+}
