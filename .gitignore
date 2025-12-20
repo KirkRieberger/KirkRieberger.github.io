@@ -10,3 +10,5 @@ elements-out.txt
 paths.txt
 *.bak
 gameshow/*
+# Ignore Swapfiles
+*.swp
